@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Knitting Row Counter</title>
+</head>
+
+<body>
+  <div class="counter-container">
+    <h1>Row Counter</h1>
+    <div id="row-counter">0</div>
+    <div class="buttons">
+      <button id="increase-btn">Increase</button>
+      <button id="decrease-btn">Decrease</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <footer>
+    <nav class="bottom-navbar">
+      <div class="logo"><a href="#">Knit App</a></div>
+      <ul class="links">
+        <li><a href="/home/alex/projects/knit-app/knit-app/src/index.html">Home</a></li>
+        <li><a href="#">Row Counter</a></li>
+        <li><a href="/home/alex/projects/knit-app/knit-app/src/yarn-tracker/index.html">Yarn Tracker</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script>
+    const rowCounter = document.getElementById('row-counter');
+    const increaseBtn = document.getElementById('increase-btn');
+    const decreaseBtn = document.getElementById('decrease-btn');
+    const resetBtn = document.getElementById('reset-btn');
+
+    let count = 0;
+
+    function updateCounter() {
+      rowCounter.textContent = count;
+    }
+
+    increaseBtn.addEventListener('click', () => {
+      count++;
+      updateCounter();
+    });
+
+    decreaseBtn.addEventListener('click', () => {
+      if (count > 0) {
+        count--;
+      }
+      updateCounter();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      updateCounter();
+    });
+  </script>
+</body>
+
+</html>

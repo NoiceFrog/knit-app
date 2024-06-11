@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Yarn Tracker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Yarn Tracker</h1>
+        <form id="yarnForm">
+            <input type="date" id="datePurchased">
+            <input type="text" id="yarnName" placeholder="Enter yarn name" required>
+            <input type="text" id="yarnColor" placeholder="Enter color">
+            <input type="text" id="yarnWeight" placeholder="Enter weight(grams)">
+            <input type="text" id="yarnWeightNames" placeholder="Enter us yarn type">
+            <input type="text" id="yarnLenght" placeholder="Enter yarn lenght">
+            <input type="text" id="yarnGauge" placeholder="Enter gauge">
+            <input type="text" id="yarnBrand" placeholder="Enter brand">
+            <input type="number" id="yarnQuantity" placeholder="Enter quantity" min="1" required>
+            <button type="submit">Add Yarn</button>
+        </form>
+        <ul id="yarnList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
